@@ -29,7 +29,6 @@ public class ReversePolishCalculatorApp {
                     calcView.printNumber(intText);
                 }
             }
-
         }
     }
 

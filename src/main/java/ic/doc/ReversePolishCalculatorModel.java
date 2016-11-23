@@ -12,6 +12,18 @@ public class ReversePolishCalculatorModel {
         this.calcView = calcView;
     }
 
+    public void setFirstNumber(double firstNumber) {
+        this.firstNumber = firstNumber;
+        count++;
+        calcView.update(this);
+    }
+
+    public void setSecondNumber(double secondNumber) {
+        this.secondNumber = secondNumber;
+        count++;
+        calcView.update(this);
+    }
+
     public void calculate(String op) {
         switch (op) {
             case "+":
@@ -31,32 +43,20 @@ public class ReversePolishCalculatorModel {
         calcView.update(this);
     }
 
-    public int count() {
-        return count;
-    }
-
-    public void setFirstNumber(double firstNumber) {
-        this.firstNumber = firstNumber;
-        count++;
-        calcView.update(this);
-    }
-
-    public void setSecondNumber(double secondNumber) {
-        this.secondNumber = secondNumber;
-        count++;
-        calcView.update(this);
-    }
-
-
-    public boolean resultIsReady() {
-        return  resultIsReady;
-    }
-
     public String getResult() {
         if (result == Math.rint(result)){
             return String.valueOf((int) result);
         }
         return String.valueOf(result);
+    }
+
+    public int count() {
+        return count;
+    }
+
+
+    public boolean resultIsReady() {
+        return  resultIsReady;
     }
 
 }

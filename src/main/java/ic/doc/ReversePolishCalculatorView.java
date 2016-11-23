@@ -16,13 +16,7 @@ public class ReversePolishCalculatorView implements Updatable {
     public ReversePolishCalculatorView(ActionListener controller){
         JFrame frame = new JFrame("Reverse Polish Calculator");
         frame.setSize(400, 250);
-        for(int i = 0; i < 9; i++) {
-            buttons.add(new JButton("" + (i +1)));
-        }
-        buttons.add(plus);
-        buttons.add(minus);
-        buttons.add(multiply);
-        buttons.add(divide);
+        addButtons();
         JPanel panel = new JPanel();
         panel.add(textField);
         for (int i = 0; i < buttons.size(); i++) {
@@ -31,6 +25,16 @@ public class ReversePolishCalculatorView implements Updatable {
         }
         frame.getContentPane().add(panel);
         frame.setVisible(true);
+    }
+
+    private void addButtons(){
+        for(int i = 0; i < 9; i++) {
+            buttons.add(new JButton("" + (i +1)));
+        }
+        buttons.add(plus);
+        buttons.add(minus);
+        buttons.add(multiply);
+        buttons.add(divide);
     }
 
     @Override
