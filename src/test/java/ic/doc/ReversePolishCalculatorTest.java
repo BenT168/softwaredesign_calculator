@@ -15,7 +15,7 @@ public class ReversePolishCalculatorTest {
     private static final int SECOND_NUMBER = 1;
 
     @Test
-    public void pressingFirstNumberPrintsToCalculator(){
+    public void pressingFirstNumberPrintsNumber(){
         context.checking(new Expectations() {{
             exactly(1).of(calcView).update(calcModel);
         }});
@@ -23,7 +23,7 @@ public class ReversePolishCalculatorTest {
     }
 
     @Test
-    public void pressingSecondNumberPrintsToCalculator(){
+    public void pressingSecondNumberPrintsNumber(){
         context.checking(new Expectations() {{
             exactly(2).of(calcView).update(calcModel);
         }});
@@ -40,9 +40,6 @@ public class ReversePolishCalculatorTest {
         calcModel.setSecondNumber(SECOND_NUMBER);
         calcModel.calculate("+");
     }
-
-
-
 
 
 }
