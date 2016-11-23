@@ -7,12 +7,15 @@ import org.junit.Test;
 
 
 public class ReversePolishCalculatorTest {
+
+    private static final int FIRST_NUMBER = 1;
+    private static final int SECOND_NUMBER = 1;
+
     @Rule
     public JUnitRuleMockery context = new JUnitRuleMockery();
     private Updatable calcView = context.mock(Updatable.class);
-    private ReversePolishCalculatorModel calcModel = new ReversePolishCalculatorModel(calcView);
-    private static final int FIRST_NUMBER = 1;
-    private static final int SECOND_NUMBER = 1;
+    private ReversePolishCalculatorModel calcModel =
+            new ReversePolishCalculatorModel(calcView);
 
     @Test
     public void pressingFirstNumberPrintsNumber(){

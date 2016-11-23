@@ -6,8 +6,10 @@ import java.awt.event.ActionListener;
 
 public class ReversePolishCalculatorApp {
 
-    private ReversePolishCalculatorView calcView = new ReversePolishCalculatorView(new Controller());
-    private ReversePolishCalculatorModel calcModel = new ReversePolishCalculatorModel(calcView);
+    private ReversePolishCalculatorView calcView =
+            new ReversePolishCalculatorView(new Controller());
+    private ReversePolishCalculatorModel calcModel =
+            new ReversePolishCalculatorModel(calcView);
 
     class Controller implements ActionListener {
         @Override
